@@ -1,0 +1,33 @@
+:root {
+	/* Primary palette */
+	--c-offwhite: #f5f3ef;
+	--c-greige: #cfc8be;
+	--c-sand: #e6ded3;
+
+	/* Accent palette */
+	--c-bronze: #8a7e6b;
+	--c-taupe: #6e675f;
+	--c-charcoal: #3f3a34;
+
+	/* Layout */
+	--container-max: 1480px;
+	--radius-lg: 28px;
+	--radius-pill: 999px;
+
+	/* Spacing */
+	--space-1: 8px;
+	--space-2: 12px;
+	--space-3: 16px;
+	--space-4: 24px;
+	--space-5: 32px;
+	--space-6: 48px;
+
+	/* Typography */
+	--text-base: 16px;
+	--text-sm: 14px;
+	--text-lg: 18px;
+	--text-xl: 42px;
+
+	--lh-tight: 1.1;
+	--lh-normal: 1.5;
+}

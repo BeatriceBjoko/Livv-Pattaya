@@ -1,0 +1,59 @@
+.navbar {
+	padding: var(--space-3) 0;
+}
+
+.navbar-inner {
+	background: var(--c-offwhite);
+	border-radius: var(--radius-lg);
+	padding: 12px 38px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-inline: auto;
+}
+
+.navbar-logo {
+	font-family: "Playfair Display", serif;
+	font-size: 14px;
+	line-height: 1.1;
+	text-align: center;
+}
+
+.navbar-logo span {
+	display: block;
+}
+
+.navbar-nav {
+	display: flex;
+	gap: var(--space-5);
+	font-size: var(--text-sm);
+	color: var(--c-taupe);
+}
+
+.navbar-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+}
+
+/* Temporary buttons (refine later) */
+.btn-primary {
+	background: var(--c-charcoal);
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: var(--radius-pill);
+	cursor: pointer;
+}
+
+.lang-switch {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	background: transparent;
+	border: 1px solid #000;
+	border-radius: var(--radius-pill);
+	padding: 6px 12px;
+	cursor: pointer;
+	font-size: var(--text-sm);
+}

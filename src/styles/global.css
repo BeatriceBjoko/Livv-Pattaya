@@ -1,0 +1,44 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	margin: 0;
+	font-size: var(--text-base);
+	line-height: var(--lh-normal);
+	color: var(--c-charcoal);
+	background: var(--c-sand);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	font: inherit;
+}
+
+.container {
+	width: 100%;
+	max-width: var(--container-max);
+	padding-inline: var(--space-3);
+	margin-inline: auto;
+}
