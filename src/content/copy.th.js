@@ -31,4 +31,25 @@ export const th = {
 			},
 		],
 	},
+	philosophy: {
+		title: "THE LIVV EXISTS FOR THIS REASON",
+		description: ["The LIVV ไม่ได้ถูกออกแบบเพื่อความหรูหราภายนอก", "แต่เกิดจากความสงบ ความเป็นส่วนตัว", "และคุณภาพของการอยู่อาศัยในระยะยาว"],
+		cards: [
+			{
+				icon: "home",
+				title: "Calm by Design",
+				description: "ออกแบบเพื่อความสงบ สร้างสมดุลในการใช้ชีวิต",
+			},
+			{
+				icon: "time",
+				title: "Timeless Quality",
+				description: "คุณภาพที่คงอยู่ยาวนานในทุกรายละเอียด",
+			},
+			{
+				icon: "lock",
+				title: "Privacy & Exclusivity",
+				description: "ความเป็นส่วนตัวที่แท้จริงในทุกมุมมอง",
+			},
+		],
+	},
 };
