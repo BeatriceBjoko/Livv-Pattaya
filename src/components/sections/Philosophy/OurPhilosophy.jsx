@@ -37,7 +37,11 @@ export default function OurPhilosophy() {
 
 									<h3 className="philosophy-card-title">{card.title}</h3>
 
-									<p className="philosophy-card-text">{card.description}</p>
+									<div className="philosophy-card-text">
+										{card.lines.map((line, i) => (
+											<p key={i}>{line}</p>
+										))}
+									</div>
 								</div>
 							))}
 						</div>

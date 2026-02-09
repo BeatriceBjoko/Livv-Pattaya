@@ -18,7 +18,7 @@
 }
 
 .philosophy-content {
-	max-width: 520px;
+	max-width: 640px;
 }
 
 .philosophy-title {
@@ -38,7 +38,7 @@
 
 .philosophy-cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(180px, 1fr));
 	gap: var(--space-4);
 }
 
@@ -59,12 +59,13 @@
 	font-weight: 600;
 	margin-bottom: 4px;
 	color: var(--c-charcoal);
+	white-space: nowrap;
 }
 
 .philosophy-card-text {
 	font-size: 13px;
 	color: var(--c-taupe);
-	line-height: 1.4;
+	line-height: 0.8;
 }
 
 /* RESPONSIVE */
