@@ -1,6 +1,7 @@
 .futur {
 	background: white;
 	padding: var(--space-7) 0;
+	padding-bottom: 90px;
 }
 
 .futur-grid {
