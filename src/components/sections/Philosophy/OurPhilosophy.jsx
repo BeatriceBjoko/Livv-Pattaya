@@ -1,5 +1,7 @@
 import "./OurPhilosophy.css";
-import { th } from "../../../content/copy.th.js";
+import { th } from "../../../content/copy.th";
+
+import InfoCard from "../../InfoCard/InfoCard";
 
 import { FiHome, FiClock, FiLock } from "react-icons/fi";
 
@@ -32,17 +34,7 @@ export default function OurPhilosophy() {
 
 						<div className="philosophy-cards">
 							{th.philosophy.cards.map((card, index) => (
-								<div key={index} className="philosophy-card">
-									<div className="philosophy-card-icon">{ICONS[card.icon]}</div>
-
-									<h3 className="philosophy-card-title">{card.title}</h3>
-
-									<div className="philosophy-card-text">
-										{card.lines.map((line, i) => (
-											<p key={i}>{line}</p>
-										))}
-									</div>
-								</div>
+								<InfoCard key={index} leading={ICONS[card.icon]} title={card.title} lines={card.lines} variant="philosophy" />
 							))}
 						</div>
 					</div>

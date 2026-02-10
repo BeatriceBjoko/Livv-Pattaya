@@ -1,0 +1,42 @@
+.info-card {
+	background: #d9d2c6;
+	border-radius: 16px;
+	padding: var(--space-4);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+	display: flex;
+	flex-direction: column;
+	min-height: 180px;
+}
+
+.info-card-leading {
+	color: var(--c-charcoal);
+	margin-bottom: var(--space-2);
+}
+
+.info-card-title {
+	font-size: var(--text-sm);
+	font-weight: 600;
+	margin-bottom: var(--space-2);
+	color: var(--c-charcoal);
+	white-space: nowrap;
+	margin-top: var(--space-1);
+}
+
+.info-card-text {
+	font-size: 13px;
+	color: var(--c-taupe);
+	line-height: 0.8;
+}
+
+.info-card-text p {
+	margin: 0;
+}
+
+/* VARIANTS */
+.info-card--philosophy {
+	/* same look */
+}
+
+.info-card--growth {
+	/* later different color / spacing */
+}

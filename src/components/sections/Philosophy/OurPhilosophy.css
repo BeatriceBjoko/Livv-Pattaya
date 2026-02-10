@@ -42,32 +42,6 @@
 	gap: var(--space-4);
 }
 
-.philosophy-card {
-	background: #d9d2c6;
-	border-radius: 16px;
-	padding: var(--space-4);
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-.philosophy-card-icon {
-	color: var(--c-charcoal);
-	margin-bottom: var(--space-2);
-}
-
-.philosophy-card-title {
-	font-size: var(--text-sm);
-	font-weight: 600;
-	margin-bottom: 4px;
-	color: var(--c-charcoal);
-	white-space: nowrap;
-}
-
-.philosophy-card-text {
-	font-size: 13px;
-	color: var(--c-taupe);
-	line-height: 0.8;
-}
-
 /* RESPONSIVE */
 @media (max-width: 1024px) {
 	.philosophy-grid {
