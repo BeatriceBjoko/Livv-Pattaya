@@ -80,4 +80,16 @@ export const th = {
 			},
 		],
 	},
+	Generations: {
+		sectionTitle: "3-GENERATION LIVING",
+		sectionSubtitle: "บ้านที่ออกแบบมาเพื่อการอยู่อาศัยร่วมกันของ 3 Generation",
+		slides: [
+			{
+				image: "/core-parents.jpg",
+				title: "Design for Parents",
+				subtitle: "โดยไม่ลดทอนความเป็นส่วนตัว",
+				points: ["ห้องนอนชั้นล่าง", "ทางเดินกว้าง", "ฟังก์ชันรองรับผู้สูงอายุ"],
+			},
+		],
+	},
 };
