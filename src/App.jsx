@@ -3,6 +3,7 @@ import Hero from "./components/sections/Hero/Hero";
 import OurPhilosophy from "./components/sections/Philosophy/OurPhilosophy";
 import Location from "./components/sections/Location/Location";
 import Generations from "./components/sections/Generations/Generations";
+import Futur from "./components/sections/Futur/Futur";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<OurPhilosophy />
 			<Location />
 			<Generations />
+			<Futur />
 		</>
 	);
 }

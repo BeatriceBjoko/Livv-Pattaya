@@ -1,15 +1,16 @@
 import "./InfoCard.css";
 
-export default function InfoCard({ leading, title, lines, variant = "philosophy" }) {
+export default function InfoCard({ icon, number, title, lines }) {
 	return (
-		<div className={`info-card info-card--${variant}`}>
-			{leading && <div className="info-card-leading">{leading}</div>}
+		<div className="info-card">
+			{number && <div className="info-card-number">{number}</div>}
+			{icon && <div className="info-card-icon">{icon}</div>}
 
 			<h3 className="info-card-title">{title}</h3>
 
 			<div className="info-card-text">
-				{lines.map((line, index) => (
-					<p key={index}>{line}</p>
+				{lines.map((line, i) => (
+					<p key={i}>{line}</p>
 				))}
 			</div>
 		</div>

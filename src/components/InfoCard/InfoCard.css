@@ -32,6 +32,13 @@
 	margin: 0;
 }
 
+.info-card-number {
+	font-size: 32px;
+	font-weight: 700;
+	color: var(--c-charcoal);
+	margin-bottom: var(--space-2);
+}
+
 /* VARIANTS */
 .info-card--philosophy {
 	/* same look */
