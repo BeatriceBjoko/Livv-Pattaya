@@ -1,10 +1,20 @@
 import "./Generations.css";
 import { th } from "../../../content/copy.th";
-
+import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function Generations() {
-	const slide = th.Generations.slides[0];
+	const slides = th.Generations.slides;
+	const [index, setIndex] = useState(0);
+	const slide = slides[index];
+
+	function prevSlide() {
+		setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+	}
+
+	function nextSlide() {
+		setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+	}
 
 	return (
 		<section className="generations">
@@ -24,25 +34,25 @@ export default function Generations() {
 						<p className="generations-subtitle">{slide.subtitle}</p>
 
 						<ul className="generations-list">
-							{slide.points.map((point, index) => (
-								<li key={index}>{point}</li>
+							{slide.points.map((point, i) => (
+								<li key={i}>{point}</li>
 							))}
 						</ul>
 					</div>
 
-					<button className="generations-arrow left" aria-label="Previous">
+					<button className="generations-arrow left" onClick={prevSlide} aria-label="Previous">
 						<FiChevronLeft size={20} />
 					</button>
 
-					<button className="generations-arrow right" aria-label="Next">
+					<button className="generations-arrow right" onClick={nextSlide} aria-label="Next">
 						<FiChevronRight size={20} />
 					</button>
 				</div>
 
 				<div className="generations-dots">
-					<span className="dot active" />
-					<span className="dot" />
-					<span className="dot" />
+					{slides.map((_, i) => (
+						<span key={i} className={`dot ${i === index ? "active" : ""}`} onClick={() => setIndex(i)} />
+					))}
 				</div>
 			</div>
 		</section>
