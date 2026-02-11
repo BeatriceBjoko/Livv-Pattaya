@@ -8,6 +8,7 @@ import Availability from "./components/sections/Availability/Availability";
 import Who from "./components/sections/Who/Who";
 import Recap from "./components/sections/Recap/Recap";
 import Contact from "./components/sections/Contact/Contact";
+import Footer from "./components/layout/Footer";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 			<Who />
 			<Recap />
 			<Contact />
+			<Footer />
 		</>
 	);
 }

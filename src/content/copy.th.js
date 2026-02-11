@@ -242,4 +242,17 @@ export const th = {
 			livingWith: "กรุณาเลือกหนึ่งตัวเลือก",
 		},
 	},
+	footer: {
+		logo: "THE LIVV – PATTAYA",
+		subtitle: "Boutique Quiet Luxury Living",
+		tagline: ["THE LIVV สร้างนิยามใหม่ของความหรูหรา", "ผ่านความสงบ ความเป็นส่วนตัว", "และคุณภาพชีวิตที่ยั่งยืนในระยะยาว"],
+		cta: "Request Private Viewing",
+		links: [
+			{ label: "Philosophy", href: "#philosophy" },
+			{ label: "Location", href: "#location" },
+			{ label: "Living", href: "#living" },
+			{ label: "Availability", href: "#availability" },
+		],
+		copyright: "All Rights Reserved",
+	},
 };
