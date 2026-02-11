@@ -5,6 +5,7 @@ import Location from "./components/sections/Location/Location";
 import Generations from "./components/sections/Generations/Generations";
 import Futur from "./components/sections/Futur/Futur";
 import Availability from "./components/sections/Availability/Availability";
+import Who from "./components/sections/Who/Who";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<Generations />
 			<Futur />
 			<Availability />
+			<Who />
 		</>
 	);
 }

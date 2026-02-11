@@ -34,7 +34,7 @@ export default function OurPhilosophy() {
 
 						<div className="philosophy-cards">
 							{th.philosophy.cards.map((card, index) => (
-								<InfoCard key={index} leading={ICONS[card.icon]} title={card.title} lines={card.lines} variant="philosophy" />
+								<InfoCard key={index} icon={ICONS[card.icon]} title={card.title} lines={card.lines} variant="philosophy" />
 							))}
 						</div>
 					</div>

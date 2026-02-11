@@ -1,0 +1,73 @@
+.who {
+	background: var(--c-offwhite);
+	padding: var(--space-7) 0;
+}
+
+.who-header {
+	text-align: center;
+	max-width: 640px;
+	margin: 0 auto var(--space-6);
+}
+
+.who-title {
+	font-size: 32px;
+	font-weight: 700;
+	color: var(--c-charcoal);
+	margin-bottom: var(--space-2);
+}
+
+.who-subtitle {
+	font-size: var(--text-base);
+	color: var(--c-taupe);
+	line-height: var(--lh-normal);
+}
+
+.who-cards {
+	display: grid;
+	grid-template-columns: repeat(4, 240px);
+	justify-content: center;
+	gap: 32px;
+}
+
+.who-card-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.who-number {
+	font-size: 32px;
+	font-weight: 700;
+	color: var(--c-charcoal);
+	margin-bottom: 12px;
+}
+
+.who .info-card {
+	width: 100%;
+	min-height: 220px;
+	border-radius: 20px;
+	padding: var(--space-5);
+}
+
+.who .info-card-icon {
+	margin-bottom: 12px;
+}
+
+.who .info-card-title {
+	font-size: 14px;
+	margin-top: 4px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+	.who-cards {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.who-cards {
+		grid-template-columns: 1fr;
+	}
+}
