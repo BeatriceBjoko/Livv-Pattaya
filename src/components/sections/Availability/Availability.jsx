@@ -1,16 +1,17 @@
 import "./Availability.css";
-import { th } from "../../../content/copy.th";
+import { useLanguage } from "../../../context/LanguageContext";
 import HomeCard from "../../HomeCard/HomeCard";
 
 export default function Availability() {
+	const { copy } = useLanguage();
 	return (
 		<section id="availability" className="availability">
 			<div className="container">
 				<div className="availability-header">
-					<h2 className="availability-title">{th.availability.title}</h2>
+					<h2 className="availability-title">{copy.availability.title}</h2>
 
 					<p className="availability-text">
-						{th.availability.lines.map((line, i) => (
+						{copy.availability.lines.map((line, i) => (
 							<span key={i}>
 								{line}
 								<br />
@@ -26,13 +27,13 @@ export default function Availability() {
 
 					<div className="availability-content">
 						<div className="availability-sidebar-header">
-							{th.availability.sidebar.map((line, i) => (
+							{copy.availability.sidebar.map((line, i) => (
 								<p key={i}>{line}</p>
 							))}
 						</div>
 
 						<div className="availability-homes-scroll">
-							{th.availability.homes.map((home, i) => (
+							{copy.availability.homes.map((home, i) => (
 								<HomeCard key={i} image={home.image} title={home.title} price={home.price} tags={home.tags} photos={home.photos} />
 							))}
 						</div>

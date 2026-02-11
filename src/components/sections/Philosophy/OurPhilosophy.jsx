@@ -1,6 +1,5 @@
 import "./OurPhilosophy.css";
-import { th } from "../../../content/copy.th";
-
+import { useLanguage } from "../../../context/LanguageContext";
 import InfoCard from "../../InfoCard/InfoCard";
 
 import { FiHome, FiClock, FiLock } from "react-icons/fi";
@@ -12,6 +11,7 @@ const ICONS = {
 };
 
 export default function OurPhilosophy() {
+	const { copy } = useLanguage();
 	return (
 		<section id="philosophy" className="philosophy">
 			<div className="container">
@@ -21,10 +21,10 @@ export default function OurPhilosophy() {
 					</div>
 
 					<div className="philosophy-content">
-						<h2 className="philosophy-title">{th.philosophy.title}</h2>
+						<h2 className="philosophy-title">{copy.philosophy.title}</h2>
 
 						<p className="philosophy-text">
-							{th.philosophy.description.map((line, i) => (
+							{copy.philosophy.description.map((line, i) => (
 								<span key={i}>
 									{line}
 									<br />
@@ -33,7 +33,7 @@ export default function OurPhilosophy() {
 						</p>
 
 						<div className="philosophy-cards">
-							{th.philosophy.cards.map((card, index) => (
+							{copy.philosophy.cards.map((card, index) => (
 								<InfoCard key={index} icon={ICONS[card.icon]} title={card.title} lines={card.lines} variant="philosophy" />
 							))}
 						</div>

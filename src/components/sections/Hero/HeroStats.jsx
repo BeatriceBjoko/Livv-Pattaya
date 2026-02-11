@@ -1,10 +1,11 @@
 import "./HeroStats.css";
-import { th } from "../../../content/copy.th";
+import { useLanguage } from "../../../context/LanguageContext.jsx";
 
 const HeroStats = () => {
+	const { copy } = useLanguage();
 	return (
 		<div className="hero-stats">
-			{th.hero.stats.map((item, index) => (
+			{copy.hero.stats.map((item, index) => (
 				<div className="hero-stat" key={index}>
 					{item.number ? (
 						<>

@@ -1,8 +1,9 @@
 import "./Navbar.css";
-import { th } from "../../content/copy.th";
+import { useLanguage } from "../../context/LanguageContext";
 import { FiGlobe } from "react-icons/fi";
 
 export default function Navbar() {
+	const { copy, language, switchLanguage } = useLanguage();
 	return (
 		<header className="navbar">
 			<div className="container">
@@ -14,10 +15,10 @@ export default function Navbar() {
 					</div>
 
 					<nav className="navbar-nav">
-						<a href="#philosophy">{th.nav.philosophy}</a>
-						<a href="#location">{th.nav.location}</a>
-						<a href="#living">{th.nav.living}</a>
-						<a href="#availability">{th.nav.availability}</a>
+						<a href="#philosophy">{copy.nav.philosophy}</a>
+						<a href="#location">{copy.nav.location}</a>
+						<a href="#living">{copy.nav.living}</a>
+						<a href="#availability">{copy.nav.availability}</a>
 					</nav>
 
 					<div className="navbar-actions">
@@ -29,12 +30,12 @@ export default function Navbar() {
 								});
 							}}
 						>
-							{th.nav.cta}
+							{copy.nav.cta}
 						</button>
 
-						<button className="lang-switch">
+						<button className="lang-switch" onClick={() => switchLanguage(language === "th" ? "en" : "th")}>
 							<FiGlobe size={16} />
-							<span>TH</span>
+							<span>{language === "th" ? "TH" : "EN"}</span>
 						</button>
 					</div>
 				</div>

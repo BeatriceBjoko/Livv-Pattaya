@@ -1,7 +1,7 @@
 import "./Recap.css";
-import { th } from "../../../content/copy.th";
-
+import { useLanguage } from "../../../context/LanguageContext";
 export default function Recap() {
+	const { copy } = useLanguage();
 	return (
 		<section className="recap">
 			<div className="container">
@@ -11,10 +11,10 @@ export default function Recap() {
 					</div>
 
 					<div className="recap-content">
-						<h2 className="recap-title">{th.recap.title}</h2>
+						<h2 className="recap-title">{copy.recap.title}</h2>
 
 						<p className="recap-text">
-							{th.recap.lines.map((line, i) => (
+							{copy.recap.lines.map((line, i) => (
 								<span key={i}>
 									{line}
 									<br />

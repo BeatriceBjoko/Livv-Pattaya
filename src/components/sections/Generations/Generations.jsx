@@ -1,10 +1,11 @@
 import "./Generations.css";
-import { th } from "../../../content/copy.th";
+import { useLanguage } from "../../../context/LanguageContext";
 import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function Generations() {
-	const slides = th.Generations.slides;
+	const { copy } = useLanguage();
+	const slides = copy.Generations.slides;
 	const [index, setIndex] = useState(0);
 	const slide = slides[index];
 
@@ -20,8 +21,8 @@ export default function Generations() {
 		<section id="living" className="generations">
 			<div className="container">
 				<div className="generations-header">
-					<h2 className="generations-section-title">{th.Generations.sectionTitle}</h2>
-					<p className="generations-section-subtitle">{th.Generations.sectionSubtitle}</p>
+					<h2 className="generations-section-title">{copy.Generations.sectionTitle}</h2>
+					<p className="generations-section-subtitle">{copy.Generations.sectionSubtitle}</p>
 				</div>
 
 				<div className="generations-card">

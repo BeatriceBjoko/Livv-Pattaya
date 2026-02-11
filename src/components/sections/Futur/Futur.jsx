@@ -1,16 +1,17 @@
 import "./Futur.css";
-import { th } from "../../../content/copy.th";
+import { useLanguage } from "../../../context/LanguageContext";
 import InfoCard from "../../InfoCard/InfoCard";
 
 export default function Futur() {
+	const { copy } = useLanguage();
 	return (
 		<section className="futur">
 			<div className="container futur-grid">
 				<div className="futur-content">
-					<h2 className="futur-title">{th.Futur.title}</h2>
+					<h2 className="futur-title">{copy.Futur.title}</h2>
 
 					<p className="futur-text">
-						{th.Futur.description.map((line, i) => (
+						{copy.Futur.description.map((line, i) => (
 							<span key={i}>
 								{line}
 								<br />
@@ -19,14 +20,14 @@ export default function Futur() {
 					</p>
 
 					<div className="futur-cards">
-						{th.Futur.cards.map((card, index) => (
+						{copy.Futur.cards.map((card, index) => (
 							<InfoCard key={index} number={card.number} title={card.title} lines={card.lines} />
 						))}
 					</div>
 				</div>
 
 				<div className="futur-image">
-					<img src={th.Futur.image} alt={th.Futur.title} />
+					<img src={copy.Futur.image} alt={copy.Futur.title} />
 				</div>
 			</div>
 		</section>

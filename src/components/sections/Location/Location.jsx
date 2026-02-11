@@ -1,6 +1,5 @@
 import "./Location.css";
-import { th } from "../../../content/copy.th";
-
+import { useLanguage } from "../../../context/LanguageContext";
 import { FiSun, FiBriefcase, FiMapPin } from "react-icons/fi";
 
 const ICONS = {
@@ -10,15 +9,16 @@ const ICONS = {
 };
 
 export default function Location() {
+	const { copy } = useLanguage();
 	return (
 		<section id="location" className="location">
 			<div className="container location-grid">
 				<div className="location-content">
-					<h2 className="location-title">{th.location.title}</h2>
-					<p className="location-subtitle">{th.location.subtitle}</p>
+					<h2 className="location-title">{copy.location.title}</h2>
+					<p className="location-subtitle">{copy.location.subtitle}</p>
 
 					<div className="location-moments">
-						{th.location.moments.map((item, i) => (
+						{copy.location.moments.map((item, i) => (
 							<div key={i} className="location-moment">
 								<div className="location-icon">{ICONS[item.icon]}</div>
 
