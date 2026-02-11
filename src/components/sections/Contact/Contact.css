@@ -1,97 +1,111 @@
 .contact {
 	background: var(--c-sand);
-	padding: var(--space-7) 0;
+	padding: var(--space-8) 0;
 }
 
 .contact-title {
-	text-align: center;
 	font-size: 32px;
 	font-weight: 700;
 	color: var(--c-charcoal);
+	text-align: center;
 	margin-bottom: var(--space-6);
 }
 
 .contact-card {
 	background: var(--c-offwhite);
-	border-radius: 24px;
-	padding: var(--space-6);
-	max-width: 900px;
+	border-radius: 40px;
+	padding: 60px 80px;
+	max-width: 720px;
 	margin: 0 auto;
 	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
-.contact-form {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-5);
-}
-
 .form-group {
+	margin-bottom: var(--space-5);
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
 }
 
 .form-group label {
 	font-size: var(--text-sm);
-	color: var(--c-charcoal);
-}
-
-.form-question {
-	font-size: var(--text-sm);
-	color: var(--c-charcoal);
+	font-weight: 600;
 	margin-bottom: 8px;
+	color: var(--c-charcoal);
 }
 
 .required {
-	color: red;
+	color: #c0392b;
 	margin-left: 4px;
-	font-weight: 600;
 }
 
-.form-group input[type="text"] {
-	padding: 14px 18px;
-	border-radius: 18px;
-	border: 1px solid #ccc;
-	background: #fff;
-	font-size: var(--text-sm);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-	outline: none;
+input[type="text"],
+input[type="email"] {
+	padding: 16px 20px;
+	border-radius: 16px;
+	border: 1px solid #ddd;
+	font-size: var(--text-base);
+	background: #f7f7f7;
 	transition: all 0.2s ease;
 }
 
-.form-group input[type="text"]:focus {
-	border-color: var(--c-charcoal);
-	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+input:focus {
+	outline: none;
+	border-color: var(--c-bronze);
+	background: white;
 }
 
-.radio-option {
+input.error {
+	border-color: #c0392b;
+}
+
+.error-text {
+	color: #c0392b;
+	font-size: 13px;
+	margin-top: 6px;
+}
+
+.radio-group {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 10px;
+}
+
+.radio-group label.radio-option {
+	font-size: var(--text-sm);
+	color: var(--c-taupe);
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	font-size: var(--text-sm);
-	color: var(--c-charcoal);
 	cursor: pointer;
-}
-
-.radio-option input {
-	accent-color: var(--c-charcoal);
 }
 
 .contact-button {
-	margin-top: var(--space-4);
-	align-self: center;
+	display: block;
+	margin: 40px auto 0 auto;
+	padding: 12px 70px;
+	border-radius: 99px;
+	border: none;
 	background: var(--c-charcoal);
 	color: white;
-	border: none;
-	padding: 12px 40px;
-	border-radius: 99px;
-	font-size: var(--text-sm);
-	font-weight: 600;
+	font-size: var(--text-base);
 	cursor: pointer;
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 }
 
 .contact-button:hover {
-	opacity: 0.9;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.success-message {
+	margin-top: 30px;
+	text-align: center;
+	color: green;
+	font-size: var(--text-sm);
 }

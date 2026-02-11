@@ -1,47 +1,164 @@
 import "./Contact.css";
+import { useState } from "react";
 import { th } from "../../../content/copy.th";
 
 export default function Contact() {
+	const [form, setForm] = useState({
+		name: "",
+		email: "",
+		phone: "",
+		livingWith: "",
+	});
+
+	const [errors, setErrors] = useState({});
+	const [submitted, setSubmitted] = useState(false);
+	const [loading, setLoading] = useState(false);
+	const [serverError, setServerError] = useState(false);
+
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	const validate = () => {
+		let newErrors = {};
+
+		if (!form.name.trim()) {
+			newErrors.name = th.contact.errors.name;
+		}
+
+		if (!form.email.trim()) {
+			newErrors.email = th.contact.errors.emailRequired;
+		} else if (!emailRegex.test(form.email)) {
+			newErrors.email = th.contact.errors.emailInvalid;
+		}
+
+		if (!form.livingWith) {
+			newErrors.livingWith = th.contact.errors.livingWith;
+		}
+
+		setErrors(newErrors);
+		return Object.keys(newErrors).length === 0;
+	};
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+
+		setForm((prev) => ({
+			...prev,
+			[name]: value,
+		}));
+
+		if (errors[name]) {
+			setErrors((prev) => ({
+				...prev,
+				[name]: null,
+			}));
+		}
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setServerError(false);
+
+		if (!validate()) return;
+
+		setLoading(true);
+
+		try {
+			const response = await fetch("https://formspree.io/f/mgoloznr", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify({
+					name: form.name,
+					email: form.email,
+					phone: form.phone,
+					livingWith: form.livingWith,
+				}),
+			});
+
+			if (response.ok) {
+				setSubmitted(true);
+				setForm({
+					name: "",
+					email: "",
+					phone: "",
+					livingWith: "",
+				});
+			} else {
+				setServerError(true);
+			}
+		} catch (error) {
+			setServerError(true);
+		}
+
+		setLoading(false);
+	};
+
 	return (
 		<section className="contact">
 			<div className="container">
 				<h2 className="contact-title">{th.contact.title}</h2>
 
 				<div className="contact-card">
-					<form className="contact-form">
+					<form onSubmit={handleSubmit} noValidate>
 						<div className="form-group">
 							<label>
 								{th.contact.fields.name.label}
 								<span className="required">*</span>
 							</label>
-							<input type="text" placeholder={th.contact.fields.name.placeholder} />
+
+							<input type="text" name="name" placeholder={th.contact.fields.name.placeholder} value={form.name} onChange={handleChange} className={errors.name ? "error" : ""} />
+
+							{errors.name && <p className="error-text">{errors.name}</p>}
 						</div>
 
 						<div className="form-group">
 							<label>
-								{th.contact.fields.contact.label}
+								{th.contact.fields.email.label}
 								<span className="required">*</span>
 							</label>
-							<input type="text" placeholder={th.contact.fields.contact.placeholder} />
+
+							<input type="email" name="email" placeholder={th.contact.fields.email.placeholder} value={form.email} onChange={handleChange} className={errors.email ? "error" : ""} />
+
+							{errors.email && <p className="error-text">{errors.email}</p>}
 						</div>
 
 						<div className="form-group">
-							<p className="form-question">
-								{th.contact.question.label}
-								<span className="required">*</span>
-							</p>
+							<label>{th.contact.fields.phone.label}</label>
 
-							{th.contact.question.options.map((option, i) => (
-								<label key={i} className="radio-option">
-									<input type="radio" name="family" />
-									<span>{option}</span>
-								</label>
-							))}
+							<input type="text" name="phone" placeholder={th.contact.fields.phone.placeholder} value={form.phone} onChange={handleChange} />
 						</div>
 
-						<button type="submit" className="contact-button">
-							{th.contact.button}
+						<div className="form-group">
+							<label>
+								{th.contact.question.label}
+								<span className="required">*</span>
+							</label>
+
+							<div className="radio-group">
+								{th.contact.question.options.map((option, i) => (
+									<label key={i} className="radio-option">
+										<input type="radio" name="livingWith" value={option} checked={form.livingWith === option} onChange={handleChange} />
+										{option}
+									</label>
+								))}
+							</div>
+
+							{errors.livingWith && <p className="error-text">{errors.livingWith}</p>}
+						</div>
+
+						<button type="submit" className="contact-button" disabled={loading}>
+							{loading ? th.contact.button.sending : th.contact.button.submit}
 						</button>
+
+						{submitted && <p className="success-message">{th.contact.messages.success}</p>}
+
+						{serverError && (
+							<p className="error-text" style={{ textAlign: "center" }}>
+								{th.contact.messages.error}
+							</p>
+						)}
 					</form>
 				</div>
 			</div>

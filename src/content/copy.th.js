@@ -215,14 +215,31 @@ export const th = {
 				label: "ชื่อ",
 				placeholder: "John Doe",
 			},
-			contact: {
-				label: "โทรศัพท์ หรือ อีเมล",
+			email: {
+				label: "อีเมล",
+				placeholder: "example@email.com",
+			},
+			phone: {
+				label: "เบอร์โทรศัพท์ (ไม่บังคับ)",
 			},
 		},
 		question: {
 			label: "ใครจะอาศัยอยู่ในบ้านหลังนี้กับคุณ?",
 			options: ["พ่อแม่", "ครอบครัวที่มีเด็ก", "ครอบครัวหลายรุ่น"],
 		},
-		button: "ส่งข้อมูล",
+		button: {
+			submit: "ส่งข้อมูล",
+			sending: "กำลังส่ง...",
+		},
+		messages: {
+			success: "ขอบคุณสำหรับข้อมูลของคุณ เราจะติดต่อกลับโดยเร็วที่สุด",
+			error: "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง",
+		},
+		errors: {
+			name: "กรุณากรอกชื่อของคุณ",
+			emailRequired: "กรุณากรอกอีเมล",
+			emailInvalid: "กรุณากรอกอีเมลให้ถูกต้อง เช่น example@email.com",
+			livingWith: "กรุณาเลือกหนึ่งตัวเลือก",
+		},
 	},
 };
