@@ -36,6 +36,33 @@
 	gap: var(--space-3);
 }
 
+.navbar-nav a {
+	text-decoration: none;
+	color: var(--c-taupe);
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.navbar-nav a:hover {
+	color: var(--c-charcoal);
+	transform: translateY(-1px);
+}
+
+.navbar-nav a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 0%;
+	height: 1px;
+	background: var(--c-charcoal);
+	transition: width 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+	width: 100%;
+}
+
 /* Temporary buttons (refine later) */
 .btn-primary {
 	background: var(--c-charcoal);
