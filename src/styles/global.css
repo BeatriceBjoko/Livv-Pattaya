@@ -20,6 +20,14 @@ body {
 	background: var(--c-sand);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	transition:
+		opacity 0.25s ease,
+		transform 0.25s ease;
+}
+
+body.lang-transition {
+	opacity: 0;
+	transform: scale(0.995);
 }
 
 img {

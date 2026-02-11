@@ -18,7 +18,16 @@ const Hero = () => {
 					<p className="hero-subtitle-en">{copy.hero.subtitleEn}</p>
 					<p className="hero-subtitle-th">{copy.hero.subtitleTh}</p>
 					<div className="hero-actions">
-						<button className="hero-btn hero-btn-primary">{copy.hero.ctaPrimary}</button>
+						<button
+							className="btn-primary"
+							onClick={() => {
+								document.getElementById("contact")?.scrollIntoView({
+									behavior: "smooth",
+								});
+							}}
+						>
+							{copy.nav.cta}
+						</button>{" "}
 						<button className="hero-btn hero-btn-secondary">{copy.hero.ctaSecondary}</button>
 					</div>
 				</div>

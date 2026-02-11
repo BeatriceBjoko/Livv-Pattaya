@@ -23,8 +23,16 @@ export default function Recap() {
 						</p>
 
 						<div className="recap-actions">
-							<button className="btn btn-primary">Request Private Viewing</button>
-
+							<button
+								className="btn-primary"
+								onClick={() => {
+									document.getElementById("contact")?.scrollIntoView({
+										behavior: "smooth",
+									});
+								}}
+							>
+								{copy.nav.cta}
+							</button>
 							<button className="btn btn-outline">Speak to LIVV Advisor</button>
 						</div>
 					</div>

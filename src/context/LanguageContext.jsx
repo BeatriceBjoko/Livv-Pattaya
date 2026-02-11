@@ -10,7 +10,15 @@ export function LanguageProvider({ children }) {
 	const copy = language === "th" ? th : en;
 
 	const switchLanguage = (lang) => {
-		setLanguage(lang);
+		// Start fade out
+		document.body.classList.add("lang-transition");
+
+		setTimeout(() => {
+			setLanguage(lang);
+
+			// Fade back in
+			document.body.classList.remove("lang-transition");
+		}, 200);
 	};
 
 	return <LanguageContext.Provider value={{ language, switchLanguage, copy }}>{children}</LanguageContext.Provider>;

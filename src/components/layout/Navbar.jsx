@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "../../context/LanguageContext";
 import { FiGlobe } from "react-icons/fi";
 
@@ -33,10 +34,7 @@ export default function Navbar() {
 							{copy.nav.cta}
 						</button>
 
-						<button className="lang-switch" onClick={() => switchLanguage(language === "th" ? "en" : "th")}>
-							<FiGlobe size={16} />
-							<span>{language === "th" ? "TH" : "EN"}</span>
-						</button>
+						<LanguageSwitcher />
 					</div>
 				</div>
 			</div>
