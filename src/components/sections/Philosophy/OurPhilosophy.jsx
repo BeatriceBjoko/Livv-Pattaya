@@ -13,7 +13,7 @@ const ICONS = {
 
 export default function OurPhilosophy() {
 	return (
-		<section className="philosophy">
+		<section id="philosophy" className="philosophy">
 			<div className="container">
 				<div className="philosophy-grid">
 					<div className="philosophy-image">

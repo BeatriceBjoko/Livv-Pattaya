@@ -11,7 +11,7 @@ const ICONS = {
 
 export default function Location() {
 	return (
-		<section className="location">
+		<section id="location" className="location">
 			<div className="container location-grid">
 				<div className="location-content">
 					<h2 className="location-title">{th.location.title}</h2>

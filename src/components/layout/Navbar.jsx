@@ -21,7 +21,16 @@ export default function Navbar() {
 					</nav>
 
 					<div className="navbar-actions">
-						<button className="btn-primary">{th.nav.cta}</button>
+						<button
+							className="btn-primary"
+							onClick={() => {
+								document.getElementById("contact")?.scrollIntoView({
+									behavior: "smooth",
+								});
+							}}
+						>
+							{th.nav.cta}
+						</button>
 
 						<button className="lang-switch">
 							<FiGlobe size={16} />

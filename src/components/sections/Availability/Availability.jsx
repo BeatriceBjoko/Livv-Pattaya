@@ -4,7 +4,7 @@ import HomeCard from "../../HomeCard/HomeCard";
 
 export default function Availability() {
 	return (
-		<section className="availability">
+		<section id="availability" className="availability">
 			<div className="container">
 				<div className="availability-header">
 					<h2 className="availability-title">{th.availability.title}</h2>

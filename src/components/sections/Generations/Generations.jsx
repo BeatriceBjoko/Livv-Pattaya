@@ -17,7 +17,7 @@ export default function Generations() {
 	}
 
 	return (
-		<section className="generations">
+		<section id="living" className="generations">
 			<div className="container">
 				<div className="generations-header">
 					<h2 className="generations-section-title">{th.Generations.sectionTitle}</h2>
