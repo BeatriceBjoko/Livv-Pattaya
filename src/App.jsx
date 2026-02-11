@@ -7,6 +7,7 @@ import Futur from "./components/sections/Futur/Futur";
 import Availability from "./components/sections/Availability/Availability";
 import Who from "./components/sections/Who/Who";
 import Recap from "./components/sections/Recap/Recap";
+import Contact from "./components/sections/Contact/Contact";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 			<Availability />
 			<Who />
 			<Recap />
+			<Contact />
 		</>
 	);
 }

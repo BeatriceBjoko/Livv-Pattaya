@@ -208,4 +208,21 @@ export const th = {
 		title: "Ready to Find Your Next Home?",
 		lines: ["หาก The LIVV ตรงกับสิ่งที่คุณกำลังมองหา", "เรายินดีต้อนรับคุณ", "นัดหมายเข้าชมแบบส่วนตัว", "ขอเข้าชมโครงการแบบส่วนตัว"],
 	},
+	contact: {
+		title: "Form (คัด lead)",
+		fields: {
+			name: {
+				label: "ชื่อ",
+				placeholder: "John Doe",
+			},
+			contact: {
+				label: "โทรศัพท์ หรือ อีเมล",
+			},
+		},
+		question: {
+			label: "ใครจะอาศัยอยู่ในบ้านหลังนี้กับคุณ?",
+			options: ["พ่อแม่", "ครอบครัวที่มีเด็ก", "ครอบครัวหลายรุ่น"],
+		},
+		button: "ส่งข้อมูล",
+	},
 };
