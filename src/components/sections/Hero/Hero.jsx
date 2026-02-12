@@ -1,9 +1,11 @@
 import { useLanguage } from "../../../context/LanguageContext.jsx";
 import "./Hero.css";
 import HeroStats from "./HeroStats.jsx";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 
 const Hero = () => {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
+	const containerRef = useRevealAnimation(language);
 	return (
 		<section className="hero">
 			<div className="hero-image-wrapper">
@@ -12,11 +14,11 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div className="hero-content">
+			<div className="hero-content" ref={containerRef}>
 				<div className="hero-text">
-					<h1 className="hero-title">{copy.hero.title}</h1>
-					<p className="hero-subtitle-en">{copy.hero.subtitleEn}</p>
-					<p className="hero-subtitle-th">{copy.hero.subtitleTh}</p>
+					<h1 className="hero-title reveal">{copy.hero.title}</h1>
+					<p className="hero-subtitle-en reveal">{copy.hero.subtitleEn}</p>
+					<p className="hero-subtitle-th reveal">{copy.hero.subtitleTh}</p>
 					<div className="hero-actions">
 						<button
 							className="btn-primary"

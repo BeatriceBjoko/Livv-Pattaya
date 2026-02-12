@@ -1,6 +1,7 @@
 import "./OurPhilosophy.css";
 import { useLanguage } from "../../../context/LanguageContext";
 import InfoCard from "../../InfoCard/InfoCard";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 
 import { FiHome, FiClock, FiLock } from "react-icons/fi";
 
@@ -11,9 +12,10 @@ const ICONS = {
 };
 
 export default function OurPhilosophy() {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
+	const containerRef = useRevealAnimation(language);
 	return (
-		<section id="philosophy" className="philosophy">
+		<section id="philosophy" className="philosophy" ref={containerRef}>
 			<div className="container">
 				<div className="philosophy-grid">
 					<div className="philosophy-image">
@@ -21,9 +23,9 @@ export default function OurPhilosophy() {
 					</div>
 
 					<div className="philosophy-content">
-						<h2 className="philosophy-title">{copy.philosophy.title}</h2>
+						<h2 className="philosophy-title reveal">{copy.philosophy.title}</h2>
 
-						<p className="philosophy-text">
+						<p className="philosophy-text reveal">
 							{copy.philosophy.description.map((line, i) => (
 								<span key={i}>
 									{line}
@@ -34,7 +36,9 @@ export default function OurPhilosophy() {
 
 						<div className="philosophy-cards">
 							{copy.philosophy.cards.map((card, index) => (
-								<InfoCard key={index} icon={ICONS[card.icon]} title={card.title} lines={card.lines} variant="philosophy" />
+								<div key={index} className="reveal">
+									<InfoCard icon={ICONS[card.icon]} title={card.title} lines={card.lines} variant="philosophy" />
+								</div>
 							))}
 						</div>
 					</div>

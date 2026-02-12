@@ -40,7 +40,7 @@ export const en = {
 			{
 				icon: "home",
 				title: "Calm by Design",
-				lines: ["Designed for tranquility.", "A relaxed atmosphere every day.", "Never intrusive to real life."],
+				lines: ["Designed for tranquility.", "A relaxed atmosphere every day.", "Never intrusive real life."],
 			},
 			{
 				icon: "time",

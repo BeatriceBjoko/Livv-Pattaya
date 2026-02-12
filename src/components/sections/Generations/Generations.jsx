@@ -2,12 +2,14 @@ import "./Generations.css";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 
 export default function Generations() {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
 	const slides = copy.Generations.slides;
 	const [index, setIndex] = useState(0);
 	const slide = slides[index];
+	const containerRef = useRevealAnimation(language);
 
 	function prevSlide() {
 		setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -18,14 +20,14 @@ export default function Generations() {
 	}
 
 	return (
-		<section id="living" className="generations">
+		<section id="living" className="generations" ref={containerRef}>
 			<div className="container">
 				<div className="generations-header">
-					<h2 className="generations-section-title">{copy.Generations.sectionTitle}</h2>
-					<p className="generations-section-subtitle">{copy.Generations.sectionSubtitle}</p>
+					<h2 className="generations-section-title reveal">{copy.Generations.sectionTitle}</h2>
+					<p className="generations-section-subtitle reveal">{copy.Generations.sectionSubtitle}</p>
 				</div>
 
-				<div className="generations-card">
+				<div className="generations-card reveal">
 					<div className="generations-image">
 						<img src={slide.image} alt={slide.title} />
 					</div>

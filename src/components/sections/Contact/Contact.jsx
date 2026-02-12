@@ -1,9 +1,11 @@
 import "./Contact.css";
 import { useState } from "react";
 import { useLanguage } from "../../../context/LanguageContext";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 
 export default function Contact() {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
+	const containerRef = useRevealAnimation(language);
 	const [form, setForm] = useState({
 		name: "",
 		email: "",
@@ -97,11 +99,11 @@ export default function Contact() {
 	};
 
 	return (
-		<section id="contact" className="contact">
+		<section id="contact" className="contact" ref={containerRef}>
 			<div className="container">
-				<h2 className="contact-title">{copy.contact.title}</h2>
+				<h2 className="contact-title reveal">{copy.contact.title}</h2>
 
-				<div className="contact-card">
+				<div className="contact-card reveal">
 					<form onSubmit={handleSubmit} noValidate>
 						<div className="form-group">
 							<label>

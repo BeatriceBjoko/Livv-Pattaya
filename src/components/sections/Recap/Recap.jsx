@@ -1,19 +1,21 @@
 import "./Recap.css";
 import { useLanguage } from "../../../context/LanguageContext";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 export default function Recap() {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
+	const containerRef = useRevealAnimation(language);
 	return (
-		<section className="recap">
+		<section className="recap" ref={containerRef}>
 			<div className="container">
-				<div className="recap-card">
-					<div className="recap-image">
+				<div className="recap-card reveal">
+					<div className="recap-image reveal">
 						<img src="/recap-home.png" alt="Luxury interior" />
 					</div>
 
 					<div className="recap-content">
-						<h2 className="recap-title">{copy.recap.title}</h2>
+						<h2 className="recap-title reveal">{copy.recap.title}</h2>
 
-						<p className="recap-text">
+						<p className="recap-text reveal">
 							{copy.recap.lines.map((line, i) => (
 								<span key={i}>
 									{line}
@@ -22,7 +24,7 @@ export default function Recap() {
 							))}
 						</p>
 
-						<div className="recap-actions">
+						<div className="recap-actions reveal">
 							<button
 								className="btn-primary"
 								onClick={() => {

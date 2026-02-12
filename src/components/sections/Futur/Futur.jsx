@@ -1,16 +1,18 @@
 import "./Futur.css";
 import { useLanguage } from "../../../context/LanguageContext";
 import InfoCard from "../../InfoCard/InfoCard";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 
 export default function Futur() {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
+	const containerRef = useRevealAnimation(language);
 	return (
-		<section className="futur">
+		<section className="futur" ref={containerRef}>
 			<div className="container futur-grid">
 				<div className="futur-content">
-					<h2 className="futur-title">{copy.Futur.title}</h2>
+					<h2 className="futur-title reveal">{copy.Futur.title}</h2>
 
-					<p className="futur-text">
+					<p className="futur-text reveal">
 						{copy.Futur.description.map((line, i) => (
 							<span key={i}>
 								{line}
@@ -21,7 +23,9 @@ export default function Futur() {
 
 					<div className="futur-cards">
 						{copy.Futur.cards.map((card, index) => (
-							<InfoCard key={index} number={card.number} title={card.title} lines={card.lines} />
+							<div key={index} className="reveal">
+								<InfoCard number={card.number} title={card.title} lines={card.lines} />
+							</div>
 						))}
 					</div>
 				</div>

@@ -1,6 +1,7 @@
 import "./Location.css";
 import { useLanguage } from "../../../context/LanguageContext";
 import { FiSun, FiBriefcase, FiMapPin } from "react-icons/fi";
+import useRevealAnimation from "../../../hooks/useRevealAnimation";
 
 const ICONS = {
 	nature: <FiSun size={20} />,
@@ -9,17 +10,18 @@ const ICONS = {
 };
 
 export default function Location() {
-	const { copy } = useLanguage();
+	const { copy, language } = useLanguage();
+	const containerRef = useRevealAnimation(language);
 	return (
-		<section id="location" className="location">
+		<section id="location" className="location" ref={containerRef}>
 			<div className="container location-grid">
 				<div className="location-content">
-					<h2 className="location-title">{copy.location.title}</h2>
-					<p className="location-subtitle">{copy.location.subtitle}</p>
+					<h2 className="location-title reveal">{copy.location.title}</h2>
+					<p className="location-subtitle reveal">{copy.location.subtitle}</p>
 
 					<div className="location-moments">
 						{copy.location.moments.map((item, i) => (
-							<div key={i} className="location-moment">
+							<div key={i} className="location-moment reveal">
 								<div className="location-icon">{ICONS[item.icon]}</div>
 
 								<div className="location-text">
