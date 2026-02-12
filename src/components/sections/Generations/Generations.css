@@ -10,7 +10,7 @@
 }
 
 .generations-section-title {
-	font-size: 28px;
+	font-size: 35px;
 	font-weight: 700;
 	color: var(--c-charcoal);
 	margin-bottom: var(--space-2);
@@ -63,13 +63,13 @@
 	font-size: 22px;
 	font-weight: 700;
 	color: var(--c-charcoal);
-	margin-bottom: var(--space-1);
+	margin: 0 0 6px 0;
 }
 
 .generations-subtitle {
 	font-size: var(--text-sm);
 	color: var(--c-taupe);
-	margin-bottom: var(--space-4);
+	margin: 0 0 14px 0;
 }
 
 .generations-list {

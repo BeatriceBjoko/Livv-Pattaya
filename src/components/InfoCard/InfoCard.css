@@ -18,14 +18,14 @@
 	font-weight: 600;
 	margin-bottom: var(--space-2);
 	color: var(--c-charcoal);
-	white-space: nowrap;
-	margin-top: var(--space-1);
+	line-height: 1.4;
+	word-break: break-word;
 }
 
 .info-card-text {
 	font-size: 13px;
 	color: var(--c-taupe);
-	line-height: 0.8;
+	line-height: 1.5;
 }
 
 .info-card-text p {

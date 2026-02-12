@@ -209,7 +209,7 @@ export const th = {
 		lines: ["หาก The LIVV ตรงกับสิ่งที่คุณกำลังมองหา", "เรายินดีต้อนรับคุณ", "นัดหมายเข้าชมแบบส่วนตัว", "ขอเข้าชมโครงการแบบส่วนตัว"],
 	},
 	contact: {
-		title: "Form (คัด lead)",
+		title: "Contact Form",
 		fields: {
 			name: {
 				label: "ชื่อ",

@@ -32,7 +32,6 @@
 .philosophy-text {
 	font-size: var(--text-base);
 	color: var(--c-taupe);
-	line-height: var(--lh-normal);
 	margin-bottom: var(--space-5);
 }
 

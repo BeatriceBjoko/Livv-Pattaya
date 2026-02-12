@@ -35,22 +35,22 @@ export const en = {
 
 	philosophy: {
 		title: "THE LIVV EXISTS FOR THIS REASON",
-		description: ["The LIVV was not created to impress on the first day.", "But to feel right every single day you truly live here.", "Luxury here", "is not about extravagance,", "but about tranquility, privacy,", "and long-term quality of living."],
+		description: ["The LIVV was not created to impress on the first day. But to feel right every single day you truly live here. Luxury here is not about extravagance, but about tranquility, privacy, and long-term quality of living."],
 		cards: [
 			{
 				icon: "home",
 				title: "Calm by Design",
-				lines: ["Designed for tranquility", "A relaxed atmosphere every day", "Never intrusive to real life"],
+				lines: ["Designed for tranquility.", "A relaxed atmosphere every day.", "Never intrusive to real life."],
 			},
 			{
 				icon: "time",
 				title: "Timeless Quality",
-				lines: ["Built with long-term value in mind", "Not trend-driven", "But made to last"],
+				lines: ["Built with long-term value in mind.", "Not trend-driven, but made to last"],
 			},
 			{
 				icon: "lock",
 				title: "Privacy & Exclusivity",
-				lines: ["True privacy", "Low-density living", "No need to impress anyone"],
+				lines: ["True privacy.", "Low-density living.", "No need to impress anyone."],
 			},
 		],
 	},
@@ -67,7 +67,7 @@ export const en = {
 			{
 				icon: "work",
 				title: "Day – Education & Work",
-				text: ["Near 3 international schools", "Close to EEC & Medical Hub", "Perfect for families and professionals", "A home where you don’t have to choose", "Between your child’s future and your quality of life"],
+				text: ["Near 3 international schools", "Close to EEC & Medical Hub", "Perfect for families and professionals", "A home where you don’t have to choose between your child’s future and your quality of life"],
 			},
 			{
 				icon: "city",
@@ -97,28 +97,28 @@ export const en = {
 				image: "/core-privacy.png",
 				title: "Designed for Privacy",
 				subtitle: "Without compromising privacy",
-				points: ["Private space for every room", "Not crowded like typical housing estates", "Breathing space between homes", "Live together", "Without sacrificing personal space"],
+				points: ["Private space for every room. Not crowded like typical housing estates", "Breathing space between homes", "Live together without sacrificing personal space"],
 			},
 		],
 	},
 
 	Futur: {
 		title: "A HOME THAT GROWS WITH YOU",
-		description: ["Designed not only for today", "But for the life you are stepping into", "Future-focused structure", "A home adaptable to life’s changes", "Not a home you outgrow"],
+		description: ["Designed not only for today, but for the life you are stepping into.", "Future-focused structure. A home adaptable to life’s changes not a home you outgrow"],
 		cards: [
 			{
 				number: "1",
-				title: "Future-Focused Design",
+				title: "Future Ready Design",
 				lines: ["Smart Home Ready"],
 			},
 			{
 				number: "2",
-				title: "Future-Focused Design",
+				title: "Future Ready Design",
 				lines: ["EV Charger Ready"],
 			},
 			{
 				number: "3",
-				title: "Future-Focused Design",
+				title: "Future Ready Design",
 				lines: ["Solar-Ready Roofing"],
 			},
 		],
@@ -127,8 +127,8 @@ export const en = {
 
 	availability: {
 		title: "LIMITED BY INTENTION",
-		lines: ["Only 7 Homes", "Not because space is limited,", "But because we value privacy over density."],
-		sidebar: ["Two-story detached homes", "Generous land plots per home", "A truly private enclave"],
+		lines: ["Only 7 Homes not because space is limited. But because we value privacy over density."],
+		sidebar: ["Two-story detached homes with generous land plots per home. A truly private enclave"],
 		homes: [
 			{
 				image: "/availability-1.png",
@@ -195,11 +195,11 @@ export const en = {
 
 	recap: {
 		title: "Ready to Find Your Next Home?",
-		lines: ["If The LIVV resonates with what you’re looking for,", "We warmly welcome you.", "Schedule a private viewing.", "Request a private project tour."],
+		lines: ["If The LIVV resonates with what you’re looking for, we warmly welcome you.", "Schedule a private viewing, and request a private project tour."],
 	},
 
 	contact: {
-		title: "Lead Qualification Form",
+		title: "Contact Form",
 		fields: {
 			name: {
 				label: "Name",

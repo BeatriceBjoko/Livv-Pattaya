@@ -28,7 +28,16 @@ const Hero = () => {
 						>
 							{copy.nav.cta}
 						</button>{" "}
-						<button className="hero-btn hero-btn-secondary">{copy.hero.ctaSecondary}</button>
+						<button
+							className="hero-btn hero-btn-secondary"
+							onClick={() => {
+								document.getElementById("philosophy")?.scrollIntoView({
+									behavior: "smooth",
+								});
+							}}
+						>
+							{copy.hero.ctaSecondary}
+						</button>
 					</div>
 				</div>
 			</div>

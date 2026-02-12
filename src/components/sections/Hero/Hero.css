@@ -112,7 +112,20 @@
 .hero-btn-secondary {
 	background: transparent;
 	color: var(--c-charcoal);
-	border: 2px solid var(--c-charcoal);
+	border: 2px solid var(--c-bronze);
+	transition: all 0.25s ease;
+}
+
+.hero-btn-secondary:hover {
+	background: var(--c-bronze);
+	color: var(--c-offwhite);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-btn-secondary:active {
+	transform: translateY(0);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* Responsive adjustments */
