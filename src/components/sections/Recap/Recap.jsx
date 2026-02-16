@@ -26,7 +26,7 @@ export default function Recap() {
 
 						<div className="recap-actions reveal">
 							<button
-								className="btn-primary"
+								className="recap-btn-primary"
 								onClick={() => {
 									document.getElementById("contact")?.scrollIntoView({
 										behavior: "smooth",
@@ -35,7 +35,7 @@ export default function Recap() {
 							>
 								{copy.nav.cta}
 							</button>
-							<button className="btn btn-outline">Speak to LIVV Advisor</button>
+							<button className="recap-btn-secondary">Speak to LIVV Advisor</button>
 						</div>
 					</div>
 				</div>
