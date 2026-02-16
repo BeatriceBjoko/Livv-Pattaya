@@ -1,5 +1,7 @@
 .navbar {
 	padding: var(--space-3) 0;
+	position: relative;
+	z-index: 100;
 }
 
 .navbar-inner {
@@ -10,6 +12,7 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-inline: auto;
+	position: relative;
 }
 
 .navbar-logo {
@@ -17,6 +20,7 @@
 	font-size: 14px;
 	line-height: 1.1;
 	text-align: center;
+	z-index: 101;
 }
 
 .navbar-logo span {
@@ -28,6 +32,7 @@
 	gap: var(--space-5);
 	font-size: var(--text-sm);
 	color: var(--c-taupe);
+	align-items: center;
 }
 
 .navbar-actions {
@@ -70,6 +75,14 @@
 	padding: 8px 16px;
 	border-radius: var(--radius-pill);
 	cursor: pointer;
+	font-size: var(--text-sm);
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+	background: var(--c-bronze);
+	transform: translateY(-1px);
 }
 
 .lang-switch {
@@ -82,4 +95,110 @@
 	padding: 6px 12px;
 	cursor: pointer;
 	font-size: var(--text-sm);
+}
+
+.navbar-hamburger {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	color: var(--c-charcoal);
+	z-index: 101;
+}
+
+.navbar-mobile-actions {
+	display: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+	.navbar-inner {
+		padding: 12px 24px;
+	}
+
+	.navbar-nav {
+		gap: var(--space-4);
+	}
+
+	.navbar-actions {
+		gap: var(--space-2);
+	}
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+	.navbar-inner {
+		padding: 12px 20px;
+	}
+
+	.navbar-hamburger {
+		display: block;
+	}
+
+	.navbar-actions {
+		display: none;
+	}
+
+	.navbar-nav {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: var(--c-offwhite);
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0;
+		padding: 80px 24px 24px;
+		transition: right 0.3s ease;
+		box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+		z-index: 100;
+	}
+
+	.navbar-nav.mobile-open {
+		right: 0;
+	}
+
+	.navbar-nav a {
+		width: 100%;
+		padding: 16px 0;
+		border-bottom: 1px solid var(--c-greige);
+		font-size: 16px;
+	}
+
+	.navbar-nav a:last-of-type {
+		border-bottom: none;
+	}
+
+	.navbar-nav a::after {
+		display: none;
+	}
+
+	.navbar-mobile-actions {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+		width: 100%;
+		margin-top: var(--space-4);
+		padding-top: var(--space-4);
+		border-top: 1px solid var(--c-greige);
+	}
+
+	.navbar-mobile-actions .btn-primary {
+		width: 100%;
+		padding: 12px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.navbar-inner {
+		padding: 10px 16px;
+		border-radius: 20px;
+	}
+
+	.navbar-logo {
+		font-size: 12px;
+	}
 }
